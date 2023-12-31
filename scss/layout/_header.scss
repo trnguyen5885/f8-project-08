@@ -1,0 +1,138 @@
+@use "../abstracts";
+
+
+%flexItemsCenter {
+    display: flex;
+    align-items: center;
+}
+
+
+.header {
+    background-color: var(--header-bg-color);
+
+    @include abstracts.breakpoint(lg) {
+        box-shadow: 0px 20px 60px 10px var(--header-shadow-color);
+    }
+    
+}
+
+.top-bar {
+   @extend %flexItemsCenter;
+    position: relative;
+    padding: 30px 0;
+
+    @include abstracts.breakpoint(lg) {
+        padding: 20px;
+    }
+
+    @include abstracts.breakpoint(md) {
+        padding: 16px;
+        justify-content: space-between;
+    }
+
+    &__more {
+        display: none;
+        @include abstracts.breakpoint(lg) {
+            display: block;
+        }
+    }
+}
+
+.navbar {
+    margin-left: 129px;
+    margin-right: auto;
+
+    @include abstracts.breakpoint(lg) {
+        display: none;
+    }
+
+    @include abstracts.breakpoint(xl) {
+        margin-left: 28px;
+    }
+
+    &__list {
+        @extend %flexItemsCenter;
+    }
+
+    &__item {
+        &:hover .dropdown {
+            opacity: 1;
+            visibility: visible;
+            scale: 1;
+            // display: block
+        }
+    }
+    
+
+    &__link {
+        @extend %flexItemsCenter;
+        height: 50px;
+        padding: 0 15px;
+        column-gap: 6px;
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+    }
+
+    &__arrow {
+        margin-top: 3px;
+    }
+}
+
+.top-act {
+    display: flex;
+    column-gap: 20px;
+
+    @include abstracts.breakpoint(lg) {
+        margin-left: auto;
+    }
+
+    @include abstracts.breakpoint(md) {
+        margin-left: 0;
+    }
+
+    &__group {
+        @extend %flexItemsCenter;
+
+        border-radius: 8px;
+        background-color: var(--top-act-group-color);
+        box-shadow: 0px 20px 60px 10px var(--top-act-group-shadow);
+
+        @include abstracts.breakpoint(md) {
+            display: none;
+        }
+    }
+
+    &__separate {
+        width: 1px;
+        height: 30px;
+        background: var(--top-act-separate-color);
+    }
+
+    &__group--single &__btn {
+        padding: 13px;
+    }
+
+    &__btn {
+        padding: 13px 20px;
+        @extend %flexItemsCenter;
+        column-gap: 10px;
+        cursor: pointer;
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        line-height: 146.667%;
+        color: var(--text-color);
+    }
+
+    &__avatar {
+        display: block;
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+}

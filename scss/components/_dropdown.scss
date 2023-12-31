@@ -1,0 +1,130 @@
+@use "../abstracts";
+.dropdown {
+    position: absolute;
+    left: 0;
+    padding-top: 54px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, visibility 0.5s, scale 0.5s;
+    scale: 0;
+    // display: none;
+    width: min(1240px, 100%);
+
+    &__inner {
+        --inner-padding: 30px;
+
+        position: relative;
+        padding: var(--inner-padding);
+        border-radius: 20px;
+        background-color: var(--dropdown-bg-color);
+        box-shadow: 0px 40px 90px 20px var(--dropdown-shadow);
+
+        &::before {
+            content: url("../icons/dropdown-arrow.svg");
+            position: absolute;
+            top: -13px;
+            left: var(--arrow-left-pos);
+            translate: -50%;
+            filter: var(--dropdown-arrow);
+        }
+    }
+}
+
+.top-menu {
+    --max-inner-height: calc(min(582px, 100vh - 158px) - var(--inner-padding) * 2);
+    position: relative;
+    &__main {
+        height: var(--max-inner-height);
+        width: 292px;
+        border-right: 1px solid var(--top-menu-border-right-color);
+        overflow-y: auto;
+    }
+}
+
+.menu-column {
+    display: flex;
+    gap: 14px;
+
+    + .menu-column {
+        margin-top: 22px;
+    }
+
+    &__icons {
+        width: 36px;
+        height: 36px;
+        position: relative;
+        flex-shrink: 0;
+
+        @include abstracts.breakpoint(xl) {
+            display: none;
+        }
+    }
+
+    &__icon-01 {
+        width: 30px;
+        height: 30px;
+        object-fit: contain;
+    }
+
+    &__icon-02 {
+        position: absolute;
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+        right: 0;
+        bottom: 0;
+        filter: var(--menu-column-icon-color);
+    }
+
+    &__content {
+        flex: 1;
+    }
+
+    &__heading {
+        margin-top: 4px;
+        font-size: 1.6rem;
+        font-weight: 500;
+        line-height: 150%;
+    }
+
+    &__list {
+        margin-top: 19px;
+    }
+
+    &__item {
+        &--active .sub-menu {
+            display: grid;
+        }
+    }
+    &__item-active > &__link,
+    &__item:hover > &__link {
+        font-weight: 500;
+        color: #0071DC;
+    }
+
+    &__link {
+        display: block;
+        padding: 7px;
+        font-size: 1.4rem;
+        line-height: 142.857%; 
+    }
+}
+
+.sub-menu {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: var(--inner-padding);
+    position: absolute;
+    gap: var(--inner-padding);
+    inset: 0 0 0 292px;
+    overflow-y: auto;
+
+    &--not-main {
+        height: var(--max-inner-height);
+        display: grid;
+        position: initial;
+        inset: initial;
+        grid-template-columns: repeat(4, 1fr);
+        padding-left: 0;
+    }
+}
