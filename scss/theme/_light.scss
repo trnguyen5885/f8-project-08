@@ -22,6 +22,14 @@ html {
     --top-menu-border-right-color: #d2d1d6;
 
     // Sidebar
-
     --sidebar-bg-color: #fff;
+    // Category
+    --cate-item-bg-color: #EEE;
+    --cate-item-thumb-bg-color: #FFF;
+    --cate-item-desc-color: #1A162E;
+
+    @include abstracts.screen(md) {
+        --cate-item-bg-color: #FFF;
+
+    }
 }
