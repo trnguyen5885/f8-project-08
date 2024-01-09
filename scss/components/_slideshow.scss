@@ -14,7 +14,7 @@
         width: 100%;
         padding-top: 34%;
 
-        @include abstracts.breakpoint(md) {
+        @include abstracts.screen(md) {
             padding-top: 50%;
         }
     }
@@ -27,7 +27,5 @@
         height: 100%;
         object-fit: cover;
         border-radius: 20px;
-        
-        
     }
 }
