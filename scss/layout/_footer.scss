@@ -2,6 +2,7 @@
 .footer {
     margin-top: 50px;
     padding: 50px 0;
+    background-color: var(--footer-bg-color);
 
     @include abstracts.screen(lg) {
         &__logo.logo {

@@ -31,3 +31,19 @@
         margin-top: 5px;
     }
 }
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 20px;
+    height: 46px;
+    border-radius: 6px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 144.444%;
+}
+
+.btn--primary {
+    background-color: #FFB700;
+}

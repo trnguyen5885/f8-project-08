@@ -3,10 +3,12 @@
     border-radius: 20px;
     background-color: var(--product-card-bg-color);
     box-shadow: 0px 20px 60px 10px var(--product-card-shadow);
-    transition: transform 0.5s;
+    border: 1px solid var(--product-card-bg-color);
+    transition: transform 0.5s, border-color 0.8s;
 
     &:hover {
         transform: translateY(-15px);
+        border-color: #77dae6;
     }
 
     &__img-wrap {
