@@ -32,11 +32,23 @@ button {
 a,img,button, input, textarea, select {
     font-family: inherit;
     color: inherit;
+    outline: none;
+    border: none;
     background-color: transparent;
+}
+
+input:focus {
+    border: none;
 }
 
 .icon {
     filter: var(--icon-color);
+}
+
+.separate {
+    margin: var(--margin) 0;
+    height: 1px;
+    background: #292E39;
 }
 
 @include abstracts.screen(sm) {

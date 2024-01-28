@@ -13,7 +13,14 @@ html {
     @include abstracts.screen(lg) {
         --header-bg-color: #fff;
         --header-shadow-color: rgba(237, 237, 246, 0.2);
+        
     }
+
+    // Header
+
+    --act-dropdown-bg-color:#FFF;
+    --act-dropdown-shadow:rgba(200, 200, 200, 0.40);
+    --act-dropdown-border-color:#D2D1D6;
 
     // Dropdown
 

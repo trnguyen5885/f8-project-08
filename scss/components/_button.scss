@@ -45,5 +45,19 @@
 }
 
 .btn--primary {
-    background-color: #FFB700;
+    background-color: #FFB700 !important;
+}
+
+.btn--text {
+    background-color: transparent;
+}
+
+.btn--round {
+    border-radius: 99px;
+}
+
+.btn--outline {
+    border: 1.5px solid #D2D1D6;
+    background-color: transparent;
+
 }

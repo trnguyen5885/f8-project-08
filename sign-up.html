@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,18 +24,71 @@
         <script src="./assets/js/scripts.js"></script>
     </head>
     <body>
-        <header id="header"></header>
-        <script>
-            load("#header", "./templates/header.html");
-        </script>
-        
+        <main class="auth">
+            
+                <div class="auth__intro">
+                    <img src="./assets/img/thumb-sign-up.png" alt="" class="auth__intro-thumb">
+                    <p class="auth__intro-desc"> The best of luxury brand values, high quality products, and innovative services</p>
+                </div>
+                <div class="auth__content">
+                    <div class="auth__content-wrapper">
+                        <a href="./" class="logo">
+                            <img src="./assets/icons/logo.svg" alt="grocerymart" class="logo__img">
+                            <h1 class="logo__title">grocerymart</h1>
+                        </a>
+                        <h1 class="auth__content-heading">Sign Up</h1>
+                        <p class="auth__content-desc">Let’s create your account and  Shop like a pro and save money.</p>
+    
+                        <div class="auth__content-inner">
+                            <form action="" class="form auth__content-form">
+                                <div class="form__group">
+                                    <div class="form__text-input">
+                                        <input type="email" name="" id="" class="form__input" placeholder="Email">
+                                        <img src="./assets/icons/message.svg" alt="" class="form__input-icon">
+                                    </div>
+                                </div>
+    
+                                <div class="form__group">
+                                    <div class="form__text-input">
+                                        <input type="password" name="" id="" class="form__input" placeholder="Password">
+                                        <img src="./assets/icons/locked.svg" alt="" class="form__input-icon">
+                                    </div>
+                                </div>
+    
+                                <div class="form__group">
+                                    <div class="form__text-input">
+                                        <input type="password" name="" id="" class="form__input" placeholder="Confirm Password">
+                                        <img src="./assets/icons/locked.svg" alt="" class="form__input-icon">
+                                    </div>
+                                </div>
+    
+                                <div class="form__group form__group--inline">
+                                    <label for="" class="form__checkbox">
+                                        <input type="checkbox" name="" id="" class="form__checkbox-input">
+                                        <span class="form__checkbox-label">Set as default card</span>
+                                    </label>
+                                    <a href="#!" class="auth__content-link form--pul-right">Recovery Password</a>
+                                </div>
+                                
+                                <div class="form__group auth__btn-group">
+                                    <a href="index-logined.html" class="btn btn--primary">Sign Up</a>
+                                    <button class="btn btn--outline">
+                                        <img src="./assets/icons/google.svg" alt="" class="btn__icon icon">
+                                        Sign in with Gmail
+                                    </button>
+                                </div>
+                            </form>
+    
+                            <p class="auth__content-text">
+                                You have an account yet?
+                                <a href="./sign-in.html" class="auth__content-link">Sign In</a>
+                            </p>
+                        </div>
 
-        <h1>Sign up page</h1>
-
-        <footer id="footer">
-            <script>
-                load("#footer", "./templates/footer.html")
-            </script>
-        </footer>
+                    </div>
+                    
+                </div>
+            
+        </main>
     </body>
 </html>
