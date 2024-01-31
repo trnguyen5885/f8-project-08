@@ -4,8 +4,8 @@
     gap: 10px;
     padding: 10px;
     border-radius: 10px;
-    background: #292E39;
-    color: #B9BABE;
+    background: var(--account-info-bg-color);
+    color: var(--account-info-text-color);
 
     &__icon {
         display: flex;
@@ -16,7 +16,7 @@
         height: 54px;
         border-radius: 8px;
 
-        background: #171C28;
+        background: var(--account-info-icon-color);
     }
 
     &__title {

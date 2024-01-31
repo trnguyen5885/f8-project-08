@@ -1275,7 +1275,12 @@ html {
   --product-filter-title-color:#1A162E;
   --product-filter-size-bg-color: #EDEDF6;
   --product-info-card-tax-bg-color: #FFFFFFCC;
+  --form-placeholder-color:#1A162E;
   --review-card-bg-color:#FAFAFD;
+  --cart-info-bg-color:#FFF;
+  --account-info-bg-color:#F6F6F6;
+  --account-info-text-color:#1A162E;
+  --account-info-icon-color:#FFF;
 }
 @media (max-width: 991.98px) {
   html {
@@ -1331,7 +1336,17 @@ html.dark {
   --product-filter-title-color:#EEE;
   --product-filter-size-bg-color: #292E39;
   --product-info-card-tax-bg-color: #EEEEEE;
+  --form-placeholder-color:#D2D1D6;
   --review-card-bg-color:#171C28;
+  --cart-info-bg-color:#171C28
+  --cart-info-text-color:#B9BABE;
+  --cart-info-controls-btn-color:#9E9DA8;
+  --sidebar-bg-color:#171C28
+  --sidebar-text-color:#B9BABE;
+  --account-info-bg-color:#292E39;
+  --account-info-text-color:#B9BABE;
+  --account-info-icon-color:#171C28;
+  --favourite-item-color:#B9BABE;
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -2296,7 +2311,7 @@ html.dark {
   line-height: 144.444%;
 }
 .form__input::placeholder {
-  color: #D2D1D6;
+  color: var(--form-placeholder-color);
 }
 .form__input-icon {
   margin-left: 12px;
@@ -2581,8 +2596,8 @@ html.dark {
   gap: 10px;
   padding: 10px;
   border-radius: 10px;
-  background: #292E39;
-  color: #B9BABE;
+  background: var(--account-info-bg-color);
+  color: var(--account-info-text-color);
 }
 .account-info__icon {
   display: flex;
@@ -2591,7 +2606,7 @@ html.dark {
   width: 54px;
   height: 54px;
   border-radius: 8px;
-  background: #171C28;
+  background: var(--account-info-icon-color);
 }
 .account-info__title {
   font-size: 1.5rem;
@@ -2610,7 +2625,7 @@ html.dark {
 .favourite-item {
   display: flex;
   gap: 20px;
-  color: #B9BABE;
+  color: var(--favourite-item-color);
 }
 .favourite-item__thumb {
   width: 151px;
@@ -2959,7 +2974,7 @@ html.dark {
 .cart-info {
   padding: 30px;
   border-radius: 20px;
-  background: #171C28;
+  background: var(--cart-info-bg-color);
   box-shadow: 0px 20px 60px 10px rgba(23, 28, 40, 0.2);
 }
 .cart-info__list {
@@ -2989,11 +3004,11 @@ html.dark {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
-  color: #B9BABE;
+  color: var(--cart-info-text-color);
 }
 .cart-info__row:nth-child(2) {
   padding-bottom: 30px;
-  border-bottom: 1px solid #292E39;
+  border-bottom: 1px solid #D2D1D6;
 }
 .cart-info__row:last-child {
   margin-top: 30px;
@@ -3012,7 +3027,7 @@ html.dark {
 .cart-info__thumb-wrap {
   padding: 10px;
   border-radius: 14px;
-  background: #292E39;
+  background: #fff;
 }
 .cart-info__content {
   flex: 1;
@@ -3021,13 +3036,13 @@ html.dark {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
-  color: #B9BABE;
+  color: var(--cart-info-text-color);
 }
 .cart-info__desc {
   margin-top: 10px;
   font-size: 1.4rem;
   line-height: 142.857%;
-  color: #B9BABE;
+  color: var(--cart-info-text-color);
 }
 
 .cart-info + .cart-info {
@@ -3038,8 +3053,8 @@ html.dark {
   display: flex;
   gap: 30px;
   padding: 30px 0;
-  border-bottom: 1px solid #292E39;
-  color: #B9BABE;
+  border-bottom: 1px solid #D2D1D6;
+  color: var(--cart-info-text-color);
 }
 .cart-item__thumb {
   width: 175px;
@@ -3093,14 +3108,14 @@ html.dark {
   font-size: 2.2rem;
   font-weight: 700;
   line-height: 145.455%;
-  color: #B9BABE;
+  color: var(--cart-info-text-color);
   text-align: right;
 }
 .cart-item__controls-btn {
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #9E9DA8;
+  color: var(--cart-info-controls-btn-color);
   font-size: 1.6rem;
   font-weight: 500;
   line-height: 150%;
@@ -3115,7 +3130,7 @@ html.dark {
 .profile__sidebar {
   padding-bottom: 30px;
   border-radius: 20px;
-  background: #171C28;
+  background: var(--sidebar-bg-color);
   box-shadow: 0px 20px 60px 10px rgba(23, 28, 40, 0.2);
   overflow: hidden;
   height: 100%;
@@ -3159,7 +3174,7 @@ html.dark {
 }
 .profile-menu {
   padding: 30px;
-  color: #B9BABE;
+  color: var(--sidebar-text-color);
 }
 .profile-menu__title {
   font-size: 1.8rem;

@@ -1,7 +1,7 @@
 .favourite-item {
     display: flex;
     gap: 20px;
-    color: #B9BABE;
+    color: var(--favourite-item-color);
 
     &__thumb {
         width: 151px;

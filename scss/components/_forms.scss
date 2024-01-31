@@ -33,7 +33,7 @@
         line-height: 144.444%;
 
         &::placeholder {
-            color: #D2D1D6;
+            color: var(--form-placeholder-color);
         }
         
         &-icon {
